@@ -1,2 +1,2 @@
 # C-Introductory-Reviewer
-A repo containing reviewers for C++ programming language.
+A repo containing introductory reviewers for C++ programming language.
