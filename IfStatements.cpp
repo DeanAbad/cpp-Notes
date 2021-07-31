@@ -2,9 +2,9 @@
 
 using namespace std;
 
-// One line of stub functions
-void ifElseStatements(), moreComparisons();
+void ifElseStatements(), moreComparisons(); // One line of stub functions
 int getMax(int num1, int num2);
+int getMax3(int num1, int num2, int num3);
 
 int main() {
     ifElseStatements();
@@ -87,6 +87,9 @@ void ifElseStatements() {
 void moreComparisons() {
     string thisText = "\nIn this example, and another function, the numbers that were entered as arguments\nare compared with one another, and the bigger number is returned by the function.\n\n\tint getMax(int num1, int num2) {\n\t\tint result;\n\n\t\tif(num1 > num2) {\n\t\t\tresult = num1;\n\t\t} else {\n\t\t\tresult = num2;\n\t\t}\n\n\t\treturn result;\n\t}\n\n\tint main() {\n\t\tcout << getMax(5, -15) << endl;\n\t}\n\nOutput: ";
     cout << thisText << getMax(5, -15) << endl;
+
+    thisText = "\nThis is another function which is based from the previous example, it has an additional argument to compare with.\n\n\tint getMax3(int num1, int num2, int num3){\n\t\tint result;\n\n\t\tif(num1 >= num2 && num1 >= num3) {\n\t\t\tresult = num1;\n\t\t} else if(num2 >= num1 && num2 >= num3) {\n\t\t\tresult = num2;\n\t\t} else if(num3 >= num1 && num3 >= num2) {\n\t\t\tresult = num3;\n\t\t}\n\n\t\treturn result;\n\t}\n\n\tint main() {\n\t\tcout << getMax3(-127, 41, 29) << endl;\n\t}\n\nOutput: ";
+    cout << thisText << getMax3(-127, 41, 29) << endl;
 }
 
 int getMax(int num1, int num2) {
@@ -96,6 +99,20 @@ int getMax(int num1, int num2) {
         result = num1;
     } else {
         result = num2;
+    }
+
+    return result;
+}
+
+int getMax3(int num1, int num2, int num3) {
+    int result;
+
+    if(num1 >= num2 && num1 >= num3) {
+        result = num1;
+    } else if(num2 >= num1 && num2 >= num3) {
+        result = num2;
+    } else if(num3 >= num1 && num3 >= num2) {
+        result = num3;
     }
 
     return result;
